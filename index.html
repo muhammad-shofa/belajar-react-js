@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Belajar React JS Bareng Pak Sandhika Galih WPU🚀</title>
+    <script src="https://unpkg.com/react@18/umd/react.development.js"></script>
+    <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+
+    <!-- Don't use this in production: -->
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+  </head>
+  <body>
+    <div id="root"></div>
+
+    <script type="text/babel">
+      const container = document.getElementById("root");
+      const root = ReactDOM.createRoot(container);
+
+      function Header(props) {
+        return <h1>Belajar React JS Bareng {props.pengajar}</h1>;
+      }
+
+      // tes props
+      function Content(props) {
+        return (
+          <>
+            <img src="assets/img/shofa.jpg" />
+            <p>
+              Saya {props.programmer} Ini adalah website yang dibuat menggunakan
+              React JS
+            </p>
+            <p>Mencoba props pada React JS : aku suka makan {props.makanan}</p>
+          </>
+        );
+      }
+
+      function TeknologiYangDipelajari() {
+        const teknologiYangDipelajari = [
+          "HTML",
+          "CSS",
+          "Bootstrap",
+          "Javascript",
+          "React JS",
+          "PHP",
+          "MySql",
+        ];
+        return (
+          <div>
+            <h3>Teknologi Yang dipelajari</h3>
+            <ul>
+              {teknologiYangDipelajari.map((teknologi) => (
+                <li key={teknologi}>{teknologi}</li>
+              ))}
+            </ul>
+          </div>
+        );
+      }
+
+      // destructuring & ternary operator
+      function Footer1({ nama }) {
+        return <h5>Ini adalah footer {nama ? nama : "Saya"}</h5>;
+      }
+
+      // state & useState
+      function SukaSuka() {
+        const [likes, setLikes] = React.useState(0);
+
+        function handleClick() {
+          setLikes(likes + 1);
+        }
+
+        return <button onClick={handleClick}>Like ({likes})</button>;
+      }
+
+      function HomePage() {
+        return (
+          <>
+            <Header pengajar="Pak Sandhika Galih WPU🚀" />
+            <Content programmer="Muhammad Shofa" makanan="Ayam" />
+            <TeknologiYangDipelajari />
+            <SukaSuka />
+            <Footer1 />
+            <Footer1 nama="mshofadev" />
+          </>
+        );
+      }
+
+      root.render(<HomePage />);
+    </script>
+  </body>
+</html>
