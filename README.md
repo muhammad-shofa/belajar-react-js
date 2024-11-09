@@ -4,14 +4,7 @@ Repo ini berisi proyek-proyek dan latihan yang saya untuk mempelajari **React JS
 
 ## Teknologi yang Digunakan
 
-Saya menggabungkan beberapa teknologi dalam pengembangan aplikasi web di repo ini untuk belajar lebih dalam dan mendapatkan pengalaman praktis:
+Saya menggabungkan beberapa teknologi dalam pengembangan website di repo ini untuk belajar lebih dalam:
 
 - **Vite**: Digunakan sebagai build tool untuk mempermudah dan mempercepat proses pengembangan React.
-- **Stack MERN**: Selain belajar frontend, saya juga menambahkan teknologi backend seperti MongoDB, Express, dan Node.js (MEN stack) untuk membangun aplikasi full-stack yang lebih lengkap.
-
-## Tujuan Pembelajaran
-
-- Memahami konsep-konsep React dan cara penggunaannya dengan baik dan benar.
-- Menggunakan Vite untuk meningkatkan performa dan efisiensi pengembangan.
-- Mengintegrasikan React dengan backend menggunakan stack MERN.
-- Membangun website Benkyou (E-Learning) untuk proyek akhir magang.
+- **Stack MERN**: Selain belajar frontend, saya juga menambahkan teknologi backend seperti MongoDB, Express, dan Node.js untuk membangun aplikasi full-stack yang lebih lengkap.
