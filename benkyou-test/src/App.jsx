@@ -1,16 +1,18 @@
 /* eslint-disable no-unused-vars */
 import React from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import Home from "./pages/home";
-import About from "./pages/About";
 import Notfound from "./pages/Notfound";
+import Dashboard from "./pages/Dashboard";
+import UsersDashboard from "./pages/UsersDashboard";
+import ClassDashboard from "./pages/ClassDashboard";
 
 function App() {
   return (
     <Router>
       <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/about" element={<About />} />
+        <Route path="/" element={<Dashboard />} />
+        <Route path="/users-dashboard" element={<UsersDashboard />} />
+        <Route path="/class-dashboard" element={<ClassDashboard />} />
         <Route path="*" element={<Notfound />} />
       </Routes>
     </Router>

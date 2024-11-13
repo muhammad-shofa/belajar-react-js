@@ -1,11 +1,14 @@
 /* eslint-disable no-unused-vars */
 // import { link } from "fs";
 import React from "react";
-// import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import { useState } from "react";
-import { NavLink } from "react-router-dom";
+// import Dashboard from "../pages/Dashboard";
+// import Users from "../pages/Users";
 
 function Sidebar() {
+  const navigate = useNavigate();
+
   const [isOpen, setIsOpen] = useState(true);
 
   const toggleSidebar = () => {
@@ -16,7 +19,7 @@ function Sidebar() {
     <div
       className={`${
         isOpen ? "w-64" : "w-20"
-      } bg-white h-screen p-5 pt-8 duration-300 relative rounded-r-lg`}
+      } bg-white h-[490px] p-5 pt-8 duration-300 relative rounded-r-lg`}
     >
       <button
         onClick={toggleSidebar}
@@ -72,11 +75,10 @@ function Sidebar() {
         )}
       </div>
       <ul>
-        <NavLink
-          to="/dashboard"
+        <li
+          onClick={() => navigate("/")}
           className="text-black text-sm flex items-center gap-x-4 cursor-pointer p-2 hover:bg-[#7752FE] hover:text-white duration-200 rounded-md"
         >
-          {/* <NavLink to="/users"> */}
           <span className="text-lg">
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -94,10 +96,9 @@ function Sidebar() {
             </svg>
           </span>
           {isOpen && <span>Dashboard</span>}
-        </NavLink>
-        {/* </li> */}
-        <NavLink
-          to="/users"
+        </li>
+        <li
+          onClick={() => navigate("/users-dashboard")}
           className="text-black text-sm flex items-center gap-x-4 cursor-pointer p-2 hover:bg-[#7752FE] hover:text-white duration-200 rounded-md"
         >
           <span className="text-lg">
@@ -117,8 +118,11 @@ function Sidebar() {
             </svg>
           </span>
           {isOpen && <span>Users</span>}
-        </NavLink>
-        <li className="text-black text-sm flex items-center gap-x-4 cursor-pointer p-2 hover:bg-[#7752FE] hover:text-white duration-200 rounded-md">
+        </li>
+        <li
+          onClick={() => navigate("/class-dashboard")}
+          className="text-black text-sm flex items-center gap-x-4 cursor-pointer p-2 hover:bg-[#7752FE] hover:text-white duration-200 rounded-md"
+        >
           <span className="text-lg">
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -196,6 +200,8 @@ function Sidebar() {
         </li>
       </ul>
     </div>
+    //   </Routes>
+    // </Router>
   );
 }
 
